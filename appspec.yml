@@ -3,7 +3,7 @@
        - TargetService:
             Type: AWS::ECS::Service
             Properties:
-                    TaskDefinition: "arn:aws:ecs:us-east-2:314701832987:task-definition/chkmt-bg-taskdef:1"
+                  TaskDefinition: <TASK_DEFINITION>
                   LoadBalancerInfo:
                       ContainerName: "webapplication"
                       ContainerPort: 80
