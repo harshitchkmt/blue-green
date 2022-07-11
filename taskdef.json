@@ -1,4 +1,4 @@
-{
+ {
   "ipcMode": null,
   "executionRoleArn": "arn:aws:iam::314701832987:role/ecsTaskExecutionRole",
   "containerDefinitions": [
@@ -9,7 +9,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/chkmt-bg-taskdef",
+          "awslogs-group": "/ecs/blue-green-chkmt-taskdef",
           "awslogs-region": "us-east-2",
           "awslogs-stream-prefix": "ecs"
         }
@@ -34,7 +34,7 @@
       "secrets": null,
       "dockerSecurityOptions": null,
       "memory": null,
-      "memoryReservation": 128,
+      "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
       "image": "<IMAGE>",
@@ -54,18 +54,18 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "webapplication"
+      "name": "ChkmtWebApplication"
     }
   ],
   "placementConstraints": [],
   "memory": "512",
-  "taskRoleArn": "arn:aws:iam::314701832987:role/ecs_task_role",
+  "taskRoleArn": "arn:aws:iam::314701832987:role/ecsTaskExecutionRole",
   "compatibilities": [
     "EC2",
     "FARGATE"
   ],
   "taskDefinitionArn": "<TASK_DEFINITION>",
-  "family": "chkmt-bg-taskdef",
+  "family": "blue-green-chkmt-taskdef",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -90,12 +90,6 @@
       "targetType": null,
       "value": null,
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
     },
     {
       "targetId": null,
