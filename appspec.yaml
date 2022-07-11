@@ -5,5 +5,5 @@
             Properties:
                   TaskDefinition: "<TASK_DEFINITION>"
                   LoadBalancerInfo:
-                      ContainerName: "webapplication"
+                      ContainerName: "chkmt-bg-cluster"
                       ContainerPort: 80
