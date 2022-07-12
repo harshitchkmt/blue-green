@@ -5,5 +5,5 @@
             Properties:
                   TaskDefinition: "<TASK_DEFINITION>"
                   LoadBalancerInfo:
-                      ContainerName: "ChkmtWebApplication"
+                      ContainerName: "nginxwebapplication"
                       ContainerPort: 80
