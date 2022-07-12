@@ -9,7 +9,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/blue-green-chkmt-taskdef",
+          "awslogs-group": "/ecs/chkmt-blue-green-taskdef",
           "awslogs-region": "us-east-2",
           "awslogs-stream-prefix": "ecs"
         }
@@ -34,7 +34,7 @@
       "secrets": null,
       "dockerSecurityOptions": null,
       "memory": null,
-      "memoryReservation": null,
+      "memoryReservation": 128,
       "volumesFrom": [],
       "stopTimeout": null,
       "image": "<IMAGE>",
@@ -54,7 +54,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "ChkmtWebApplication"
+      "name": "nginxwebapplication"
     }
   ],
   "placementConstraints": [],
@@ -65,7 +65,7 @@
     "FARGATE"
   ],
   "taskDefinitionArn": "<TASK_DEFINITION>",
-  "family": "blue-green-chkmt-taskdef",
+  "family": "chkmt-blue-green-taskdef",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -90,6 +90,12 @@
       "targetType": null,
       "value": null,
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
     },
     {
       "targetId": null,
